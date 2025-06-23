@@ -1,5 +1,5 @@
-import Image from "next/Image"
-import Link from "next/Link"
+import Image from "next/Images"
+import Link from "next/Links"
 const Logo = () => {
     return (
         <Link href={"/"}>

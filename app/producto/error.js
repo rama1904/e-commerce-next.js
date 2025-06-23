@@ -3,9 +3,6 @@ import {useRouter} from ""
 import { useEffect } from "react"
 import Boton from "./componets/button"
 
-
-export default function error ({error, reset})
-
 useEffect(() => {
     console.error(error)
 }) [error]
@@ -17,3 +14,4 @@ return (
         <Boton onClick={reset}>Intentar nuevamente</Boton>
     </div>
 )
+

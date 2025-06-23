@@ -6,7 +6,7 @@ const nextConfig = {
             hostname: 'api-middleware-mcd.mcdonaldscupones.com',
           },
           {
-            hostname: 'chevrolet.com.ar',
+            hostname: 'Pasionporlacamiseta.com.ar',
           },
         ],
       },

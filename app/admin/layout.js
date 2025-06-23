@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
+import Navbar from "../components/Navbar.js";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,13 +14,26 @@ const geistMono = Geist_Mono({
  
 export const metadata = {
     title:"Carrito | Pasion por la camiseta"
-    description: "Carrito. En el sitio oficial de Paasion por la camiseta vas a poder encontrar todas la camisetas de futbol que vos quieras"
-    keywords:["Pasion por la camiseta,Pasion por la camiseta argentina ,Pasion por la camiseta camisetas,Pasion por la camiseta cam,Pasion por la camiseta,Pasion por la camiseta  pickups"]
+    ,description: "Carrito. En el sitio oficial de Paasion por la camiseta vas a poder encontrar todas la camisetas de futbol que vos quieras"
+    ,keywords:["Pasion por la camiseta,Pasion por la camiseta argentina ,Pasion por la camiseta camisetas,Pasion por la camiseta cam,Pasion por la camiseta,Pasion por la camiseta  pickups"]
 }
 export default function NosotrosLayout({ children }) {
   return (
     <>
       {children}
     </>
+  );
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="es">
+      <body>
+        <Navbar /> 
+        <main style={{ padding: '20px' }}>
+          {children} 
+        </main>
+      </body>
+    </html>
   );
 }
