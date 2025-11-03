@@ -1,9 +1,12 @@
 import Link from "next/link";
+import { useCart } from "../context/Cartcontext";
 
 const Navbar = () => {
+  const { totalItems } = useCart(); // <--- Usa el hook para obtener totalItems
+
   return (
     <nav style={{
-      backgroundColor: '#343a40', 
+      backgroundColor: '#343a40',
       padding: '10px 20px',
       display: 'flex',
       justifyContent: 'space-between',
@@ -22,7 +25,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li style={{ marginLeft: '20px' }}>
-          <Link href="/productos" style={{ textDecoration: 'none', color: 'white' }}>
+          <Link href="/catalogo" style={{ textDecoration: 'none', color: 'white' }}>
             Tienda
           </Link>
         </li>
@@ -43,7 +46,7 @@ const Navbar = () => {
         </li>
         <li style={{ marginLeft: '20px' }}>
           <Link href="/carrito" style={{ textDecoration: 'none', color: 'white' }}>
-            🛒 (0) {/* Aquí irá el contador del carrito */}
+            🛒 ({totalItems}) {/* <--- Muestra el total de ítems */}
           </Link>
         </li>
       </ul>
